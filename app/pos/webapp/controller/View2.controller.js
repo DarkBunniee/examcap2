@@ -6,5 +6,6 @@ sap.ui.define([
     return Controller.extend("pos.controller.View2", {
         onInit() {
         }
+        
     });
 });
