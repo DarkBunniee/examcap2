@@ -26,3 +26,8 @@ server:
       configuration:
         flp:
           theme: sap_horizon
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**

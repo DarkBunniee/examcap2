@@ -60,12 +60,12 @@ modules:
     build-result: resources
     requires:
     - artifacts:
-      - list.zip
-      name: list
+      - pos.zip
+      name: pos
       target-path: resources/
-- name: list
+- name: pos
   type: html5
-  path: app/list
+  path: app/pos
   build-parameters:
     build-result: dist
     builder: custom

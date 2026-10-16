@@ -1,4 +1,5 @@
 
-using from './fiori/annotations';
 
 using from './list/annotations';
+
+using from './pos/annotations';

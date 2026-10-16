@@ -1,0 +1,132 @@
+<mvc:View
+    controllerName="pos.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="Purchase Orders"
+    >
+        <content>
+            <Table
+                id="purchaseOrderTable"
+                items="{/POHeaders}"
+                growing="true"
+                growingScrollToLoad="true"
+                noDataText="No purchase orders found"
+            >
+                <headerToolbar>
+                    <Toolbar id="_IDGenToolbar">
+                        <Title
+                            id="_IDGenTitle"
+                            text="Purchase Order Headers"
+                            level="H2"
+                        />
+                        <Button
+                            id="btn2"
+                            type="Accept"
+                            text="Accept"
+                            press=".onPress"
+                            ariaDescribedBy="acceptButtonDescription genericButtonDescription"
+                        >
+                            <layoutData>
+                                <FlexItemData
+                                    id="flow1"
+                                    growFactor="1"
+                                />
+                            </layoutData>
+                        </Button>
+                        <Button
+                            id="btn3"
+                            type="Reject"
+                            text="Reject"
+                            press=".onPress"
+                            ariaDescribedBy="rejectButtonDescription genericButtonDescription"
+                        >
+                            <layoutData>
+                                <FlexItemData
+                                    id="flow2"
+                                    growFactor="1"
+                                />
+                            </layoutData>
+                        </Button>
+                        <Button id="btn4"
+                            text="Create PO"
+                            type="Emphasized"
+                            icon="sap-icon://add"
+                            press="onCreatePO"
+                        />
+                    </Toolbar>
+                </headerToolbar>
+
+                <columns>
+                    <Column id="_IDGenColumn">
+                        <Text
+                            id="_IDGenText1"
+                            text="PO Number"
+                        />
+                    </Column>
+                    <Column id="_IDGenColumn1">
+                        <Text
+                            id="_IDGenText2"
+                            text="Supplier"
+                        />
+                    </Column>
+                    <Column id="_IDGenColumn2">
+                        <Text
+                            id="_IDGenText3"
+                            text="Created At"
+                        />
+                    </Column>
+                    <Column
+                        id="_IDGenColumn3"
+                        hAlign="End"
+                    >
+                        <Text
+                            id="_IDGenText4"
+                            text="Total Amount"
+                        />
+                    </Column>
+                    <Column id="_IDGenColumn4">
+                        <Text
+                            id="_IDGenText5"
+                            text="Currency"
+                        />
+                    </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem
+                        id="_IDGenColumnListItem"
+                        type="Navigation"
+                        press="onRowPress"
+                    >
+                        <cells>
+                            <Text
+                                id="_IDGenText6"
+                                text="{poNumber}"
+                            />
+                            <Text
+                                id="_IDGenText7"
+                                text="{supplier}"
+                            />
+                            <Text
+                                id="_IDGenText8"
+                                text="{createdAt}"
+                            />
+                            <ObjectNumber
+                                id="_IDGenObjectNumber"
+                                number="{totalAmount}"
+                                unit="{currency}"
+                            />
+                            <Text
+                                id="_IDGenText9"
+                                text="{currency}"
+                            />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

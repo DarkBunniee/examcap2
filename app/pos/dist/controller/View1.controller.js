@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/mvc/Controller"],e=>{"use strict";return e.extend("pos.controller.View1",{onInit(){},onRowPress:function(e){var t=e.getSource();var o=t.getBindingContext();var n=o.getProperty("ID");this.getOwnerComponent().getRouter().navTo("RouteView2",{ID:n})},onCreatePO:function(){this.getOwnerComponent().getRouter().navTo("RouteView3")}})});
+//# sourceMappingURL=View1.controller.js.map

@@ -1,0 +1,42 @@
+<mvc:View controllerName="pos.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+<Page
+    id="detailPage"
+    title="Purchase Order Header"
+    showNavButton="true"
+    navButtonPress="onNavBack">
+
+    <content>
+        <ObjectHeader id="_IDGenObjectHeader1"
+            title="{poNumber}"
+            intro="Purchase Order Details"
+            number="{totalAmount}"
+            numberUnit="{currency}">
+
+            <attributes>
+                <ObjectAttribute id="_IDGenObjectAttribute"
+                    title="Purchase Order ID"
+                    text="{ID}"/>
+                <ObjectAttribute id="_IDGenObjectAttribute1"
+                    title="Supplier"
+                    text="{supplier}"/>
+                <ObjectAttribute id="_IDGenObjectAttribute2"
+                    title="Created At"
+                    text="{createdAt}"/>
+                <ObjectAttribute id="_IDGenObjectAttribute3"
+                    title="Created By"
+                    text="{createdBy}"/>
+                <ObjectAttribute id="_IDGenObjectAttribute4"
+                    title="Modified At"
+                    text="{modifiedAt}"/>
+                <ObjectAttribute id="_IDGenObjectAttribute5"
+                    title="Modified By"
+                    text="{modifiedBy}"/>
+            </attributes>
+        </ObjectHeader>
+    </content>
+
+</Page>
+
+</mvc:View>

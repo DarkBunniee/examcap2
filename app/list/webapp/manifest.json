@@ -1,5 +1,5 @@
 {
-  "_version": "1.76.0",
+  "_version": "1.89.0",
   "sap.app": {
     "id": "list",
     "type": "application",
@@ -12,8 +12,8 @@
     "resources": "resources.json",
     "sourceTemplate": {
       "id": "@sap/generator-fiori:lrop",
-      "version": "1.20.0",
-      "toolsId": "07d9df86-1557-4c4c-8bf1-9f6f4e96b046"
+      "version": "1.33.0",
+      "toolsId": "7fff2c75-5452-4493-8dcc-b31b4be375e2"
     },
     "dataSources": {
       "mainService": {
@@ -45,12 +45,11 @@
   "sap.ui5": {
     "flexEnabled": true,
     "dependencies": {
-      "minUI5Version": "1.143.2",
+      "minUI5Version": "1.153.0",
       "libs": {
         "sap.m": {},
         "sap.ui.core": {},
-        "sap.fe.templates": {},
-        "sap.fe.macros": {}
+        "sap.fe.templates": {}
       }
     },
     "contentDensities": {
@@ -119,64 +118,9 @@
               "controlConfiguration": {
                 "@com.sap.vocabularies.UI.v1.LineItem": {
                   "tableSettings": {
-                    "type": "ResponsiveTable",
-                    "enableExport": true,
-                    "enableMassEdit": {},
-                    "selectionLimit": 1,
-                    "creationMode": {
-                      "name": "CreationDialog"
-                    },
-                    "personalization": {
-                      "column": true
-                    }
-                  },
-                  "actions": {
-                    "sendmail": {
-                      "press": "list.ext.controller.Sendmail.sendmail",
-                      "visible": true,
-                      "enabled": true,
-                      "requiresSelection": false,
-                      "text": "{i18n>sendMail}"
-                    }
-                  }
-                },
-                "@com.sap.vocabularies.UI.v1.SelectionFields": {
-                  "filterFields": {
-                    "Materials": {
-                      "label": "{i18n>materials}",
-                      "property": "items/material",
-                      "template": "list.ext.fragment.Mat",
-                      "required": false,
-                      "position": {
-                        "placement": "Before",
-                        "anchor": "supplier"
-                      }
-                    }
-                  }
-                },
-                "/POItems/@com.sap.vocabularies.UI.v1.LineItem#tableView": {
-                  "tableSettings": {
-                    "enableMassEdit": {},
-                    "enableExport": true,
-                    "type": "GridTable",
-                    "widthIncludingColumnHeader": true
+                    "type": "ResponsiveTable"
                   }
                 }
-              },
-              "hideFilterBar": false,
-              "initialLoad": "Enabled",
-              "views": {
-                "paths": [
-                  {
-                    "key": "tableView",
-                    "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#tableView"
-                  },
-                  {
-                    "key": "tableView1",
-                    "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#tableView",
-                    "entitySet": "POItems"
-                  }
-                ]
               }
             }
           }
@@ -195,46 +139,7 @@
                     "route": "POItemsObjectPage"
                   }
                 }
-              },
-              "sectionLayout": "Page",
-              "content": {
-                "footer": {
-                  "actions": {
-                    "approve": {
-                      "press": "list.ext.controller.Approve.approve",
-                      "visible": true,
-                      "enabled": true,
-                      "text": "{i18n>approve}"
-                    },
-                    "reject": {
-                      "press": "list.ext.controller.Reject.Reject",
-                      "visible": true,
-                      "enabled": true,
-                      "text": "{i18n>rejected}",
-                      "position": {
-                        "placement": "After",
-                        "anchor": "approve"
-                      }
-                    }
-                  }
-                },
-                "header": {
-                  "anchorBarVisible": true
-                },
-                "body": {
-                  "sections": {
-                    "POItems": {
-                      "template": "list.ext.fragment.POItems",
-                      "position": {
-                        "placement": "After",
-                        "anchor": "GeneratedFacet1"
-                      },
-                      "title": "Purchase Order Items"
-                    }
-                  }
-                }
-              },
-              "variantManagement": "None"
+              }
             }
           }
         },
@@ -245,8 +150,7 @@
           "options": {
             "settings": {
               "editableHeaderContent": false,
-              "contextPath": "/POHeaders/items",
-              "sectionLayout": "Page"
+              "contextPath": "/POHeaders/items"
             }
           }
         }
@@ -256,5 +160,10 @@
   "sap.fiori": {
     "registrationIds": [],
     "archeType": "transactional"
+  },
+  "sap.fe": {
+    "app": {
+      "enableLazyLoading": true
+    }
   }
 }

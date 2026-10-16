@@ -1,27 +1,26 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Thu Dec 18 2025 09:08:14 GMT+0000 (Coordinated Universal Time)|
+|**Generation Date and Time**<br>Fri Oct 16 2026 06:56:51 GMT+0000 (Coordinated Universal Time)|
 |**App Generator**<br>SAP Fiori Application Generator|
-|**App Generator Version**<br>1.20.0|
+|**App Generator Version**<br>1.33.0|
 |**Generation Platform**<br>SAP Business Application Studio|
 |**Template Used**<br>List Report Page V4|
 |**Service Type**<br>Local CAP|
 |**Service URL**<br>http://localhost:4004/odata/v4/po/|
 |**Module Name**<br>list|
-|**Application Title**<br>App Title|
+|**Application Title**<br>Purchase Detail Screen|
 |**Namespace**<br>|
 |**UI5 Theme**<br>sap_horizon|
-|**UI5 Version**<br>1.143.2|
-|**Enable Code Assist Libraries**<br>False|
+|**UI5 Version**<br>1.153.0|
 |**Enable TypeScript**<br>False|
-|**Add Eslint configuration**<br>False|
+|**Add Eslint configuration**<br>True, see https://www.npmjs.com/package/@sap-ux/eslint-plugin-fiori-tools#rules for the eslint rules.|
 |**Main Entity**<br>POHeaders|
 |**Navigation Entity**<br>items|
 
 ## list
 
-An SAP Fiori application.
+SAP CAP Manage
 
 ### Starting the generated app
 
