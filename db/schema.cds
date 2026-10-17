@@ -22,3 +22,6 @@ entity POItem : managed {
   quantity      : Integer;
   price         : Decimal(15,2);
 }
+
+
+// updated schema in cds modeling
